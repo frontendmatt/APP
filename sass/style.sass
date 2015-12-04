@@ -6,7 +6,7 @@
 @import reset
 @import utility
 @import breakpoints
-
+// imports
 .grid
   margin: 0 auto
   max-width: 1100px
@@ -14,24 +14,25 @@
   .whole, .half, .third, .thirds, .quarter, .quarters, .fifth, .fourFifths, .large, .small
     float: none
     width: auto
-
+// MY GRID ^
 \:root
   font-size: 100%
-
 // SOME INCLUDES DONT REQUIRE EM/REM/PX SUFFIX !important
 html, body
+  font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+  user-select: none
+
   background: rgba(100, 180, 220, 1)
   // +roboto(1.5, 100, .8, $white)
   font-family: roboto
   font-size: responsive 26px 36px //rucksack
   font-weight: $light
   color: white
-  +pad(50)
   +line(1.2)
+
+  +pad(50)
   +mobile
     // +roboto(1, $light, 1.3, null)
-    +pad(20)
+    // +pad(20)
     padding-top: 50px
-  font-smoothing: antialiased
-  text-rendering: optimizeLegibility
-  user-select: none
