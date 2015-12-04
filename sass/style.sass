@@ -19,17 +19,18 @@
   font-size: 100%
 // SOME INCLUDES DONT REQUIRE EM/REM/PX SUFFIX !important
 html, body
-  font-smoothing: antialiased
-  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -webkit-text-rendering: optimizeLegibility
   user-select: none
 
   background: rgba(100, 180, 220, 1)
   // +roboto(1.5, 100, .8, $white)
   font-family: roboto
-  font-size: responsive 26px 36px //rucksack
+  font-size: responsive 26px 36px
+  //rucksack
   font-weight: $light
-  color: white
   +line(1.2)
+  color: white
 
   // +pad(50)
   +mobile
