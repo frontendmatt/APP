@@ -1,1 +1,1 @@
-document.write("");
+var myApp = angular.module('myApp', []);
