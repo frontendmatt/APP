@@ -1,39 +1,72 @@
-@import 'bourbon/bourbon'
+// @import 'bourbon/bourbon'
 @import colour
 @import flex
 @import font
-@import grid
+@import form
+// @import my-grid
 @import reset
 @import utility
 @import breakpoints
-// imports
-.grid
-  margin: 0 auto
-  max-width: 1100px
-+mobile
-  .whole, .half, .third, .thirds, .quarter, .quarters, .fifth, .fourFifths, .large, .small
-    float: none
-    width: auto
-// MY GRID ^
+// imports ^
+
+// !my-grid > defaults
+// .grid
+//   margin: 0 auto
+//   max-width: 1200px
+// +mobile
+//   .whole, .half, .third, .thirds, .quarter, .quarters, .fifth, .fourFifths, .large, .small
+//     float: none
+//     width: auto
+// my-grid BREAKPOINT RULES ^
 \:root
   font-size: 100%
+// SETS EM BASE ^
 // SOME INCLUDES DONT REQUIRE EM/REM/PX SUFFIX !important
 html, body
   -webkit-font-smoothing: antialiased
   -webkit-text-rendering: optimizeLegibility
   user-select: none
 
-  background: rgba(100, 180, 220, 1)
+  background: #d4e4ef
+  background: -moz-linear-gradient(top, #d4e4ef 0%, #86aecc 100%)
+  background: -webkit-linear-gradient(top, #d4e4ef 0%,#86aecc 100%)
+  background: linear-gradient(to bottom, #d4e4ef 0%,#86aecc 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1 )
+
   // +roboto(1.5, 100, .8, $white)
-  font-family: roboto
-  font-size: responsive 26px 36px
-  //rucksack
-  font-weight: $light
+  font-family: "roboto", sans-serif
+  font-size: responsive 16px 26px
+  //rucksack ^
+  font-weight: $regular
   +line(1.2)
   color: white
-
   // +pad(50)
+
   +mobile
-    // +roboto(1, $light, 1.3, null)
+    font-family: "roboto", sans-serif
+    font-size: responsive 20px 26px
+    font-weight: $regular
     // +pad(20)
-    padding-top: 50px
+    // padding-top: 50px
+
+.container, .container-fluid
+  // margin: 5rem auto
+  // width: 95%
+  // max-width: 1200px
+
+// get busy down here...
+
+.btn-primary
+  background: $notBlack
+  font-weight: $bold
+
+.red
+  background: red
+
+.nudge
+  +mobile
+    margin-top: 5px
+    +flex-center
+
+.bog
+  +center-middle
