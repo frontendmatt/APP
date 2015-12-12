@@ -1,4 +1,3 @@
-// @import 'bourbon/bourbon'
 @import colour
 @import flex
 @import font
@@ -7,6 +6,7 @@
 @import reset
 @import utility
 @import breakpoints
+@import toast-grid
 // imports ^
 
 // !my-grid > defaults
@@ -27,7 +27,7 @@ html, body
   -webkit-text-rendering: optimizeLegibility
   user-select: none
 
-  background: #d4e4ef
+  background: #4dc6db
   // background: -moz-linear-gradient(top, #d4e4ef 0%, #86aecc 100%)
   // background: -webkit-linear-gradient(top, #d4e4ef 0%,#86aecc 100%)
   // background: linear-gradient(to bottom, #d4e4ef 0%,#86aecc 100%)
@@ -39,7 +39,7 @@ html, body
   //rucksack ^
   font-weight: $regular
   +line(1.2)
-  color: white
+  color: black
   // +pad(50)
 
   +mobile
@@ -49,9 +49,12 @@ html, body
     // +pad(20)
     // padding-top: 50px
 
+bootstrap
 .container, .container-fluid
-  // margin: 5rem auto
-  // width: 95%
-  // max-width: 1200px
+  margin: 5rem auto
+  width: 95%
+  max-width: 1200px
 
 // get busy down here...
+p
+  color: black

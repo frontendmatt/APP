@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp          = require('gulp'),
     babel         = require('gulp-babel'),
     postcss       = require('gulp-postcss'),
@@ -6,6 +8,7 @@ var gulp          = require('gulp'),
     rucksack      = require('rucksack-css'),
     sass          = require('gulp-ruby-sass'),
     uglify        = require('gulp-uglify'),
+    jade          = require('gulp-jade'),
     browserSync   = require('browser-sync'),
     reload        = browserSync.reload,
     plumber       = require('gulp-plumber'),
@@ -38,6 +41,16 @@ gulp.task('js', function() {
   .pipe(reload({stream:true}));
 });
 
+//jade task
+gulp.task('jade', function() {
+  gulp.src(['!jade/*.jade', './index.jade'])
+  .pipe(jade({
+    pretty: true, //uncompressed
+  }))
+  .pipe(plumber())
+  .pipe(gulp.dest('./'))
+  .pipe(reload({stream:true}))
+});
 //html tasks
 gulp.task('html', function() {
   gulp.src('*.html')
@@ -54,11 +67,13 @@ gulp.task('build:delete', ['build:copy'], function(cb) {
   del([
     'build/sass',
     'build/js',
+    'build/jade',
     'build/node_modules',
     'build/gulpfile.js',
     'build/package.json',
     'build/codebits.txt',
     'build/bourbon',
+    'build/index.jade',
   ], cb);
 });
 
@@ -78,8 +93,9 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
   gulp.watch('sass/style.sass', ['sass']);
   gulp.watch('js/app.js', ['js']);
+  gulp.watch(['jade/*.jade', 'index.jade'], ['jade']);
   gulp.watch('*.html', ['html']);
 });
 
 //default tasks
-gulp.task('default', ['sass', 'js', 'html', 'browser-sync', 'watch']);
+gulp.task('default', ['sass', 'js', 'jade', 'html', 'browser-sync', 'watch']);

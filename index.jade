@@ -1,0 +1,37 @@
+doctype
+html(lang="en" ng-app="myApp")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- TITLE
+    title 
+      include jade/title.jade
+    //- SEO
+    meta(name='description', content='')
+    //- FAVICON
+    link(rel="shortcut icon", href="img/favicon.ico")
+    //- FOUNDATION  
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.min.css")
+    //- BOOTSTRAP  
+    //- link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    //- GRIDLEX FLEXBOX GRID
+    //- docs : http://gridlex.devlint.fr/
+    //- link(rel="stylesheet", href="https://cdn.jsdelivr.net/gridlex/2.0.6/gridlex.min.css")  
+    //- CUSTOM CSS
+    link(rel='stylesheet', href='css/style.css')
+    
+  body
+    div(ng-controller="mainController") 
+      include jade/layout.jade
+    
+//- JQUERY
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+//- ANGULAR
+script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js')
+//- FOUNDATION JS
+script(src='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/foundation.min.js')
+//- BOOTSTRAP JS
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+//- CUSTOM JS
+script(type="text/javascript" src='js-min/app.min.js')
