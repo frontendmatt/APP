@@ -1,23 +1,18 @@
-/* bourbon
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-+size(50px 100px)
-+position(absolute, auto .1em .5em null)
+BOOTSTRAP
+  .container || .container-fluid
+    .row
+      .col-sm-8
 
-$helvetica > auto adds fallbacks
-font-size: em(12)  > converts pixels to ems add ( ,24) for basefont size
 
-color: tint(red, 10%)
+FOUNDATION
+  .row
+    .small-4.colums
 
-+clearfix
 
-/* bourbon neat > 12 column grid example
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-section
-  @include outer-container
-  aside
-    @include span-column(3)
-  article
-    @include span-column(9)
+TOAST
+  .row
+    .col.col--1-of-2
+
 
 /* post css - lost grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -238,3 +233,39 @@ a
   &:hover,
   &:focus
     color: lighten(#0074D9, 20%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+==================================================================================================================================================================
+!REMOVED  !REMOVED  !REMOVED  !REMOVED  !REMOVED
+
+/* bourbon
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
++size(50px 100px)
++position(absolute, auto .1em .5em null)
+
+$helvetica > auto adds fallbacks
+font-size: em(12)  > converts pixels to ems add ( ,24) for basefont size
+
+color: tint(red, 10%)
+
++clearfix
+
+/* bourbon neat > 12 column grid example
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+section
+  @include outer-container
+  aside
+    @include span-column(3)
+  article
+    @include span-column(9)
