@@ -1,15 +1,49 @@
-BOOTSTRAP
+/* BOOTSTRAP –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .container || .container-fluid
     .row
       .col-sm-8
 
 
-FOUNDATION
+/* FOUNDATION –––––––––––––––––––––––––––––––––––––––––––––––––– */
+//GRID
   .row
-    .small-4.colums
+    .medium-2.columns
+    .medium-9.medium-offset-1
+//BLOCK GRID
+  .row
+    ul.medium-block-grid-3
+      li
+        img(src='', alt='')
+      li
+        img(src='', alt='')
+      li
+        img(src='', alt='')
+      li
+        img(src='', alt='')
+      li
+        img(src='', alt='')
+//LISTS
+  ul.inline-list li*3
+  ul.no-bullet
+//TYPOGRAPHY
+  blockquote a quote
+    cite by me
+  span.label this is a label
+  kbd Alt + F4
+//NAV
+  .off-canvas-wrap data-offcanvas
+    .inner-wrap
+      a.left-off-canvas-toggle #
+      aside.left-off-canvas-menu
+        ul.no-bullet
+          li a
+      .row
+        .medium-12
+      a.exit-off-canvas
 
 
-TOAST
+
+/* TOAST –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .row
     .col.col--1-of-2
 
